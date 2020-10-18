@@ -1,4 +1,4 @@
-package com.musiccloud.musiccloud;
+package com.musiccloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
