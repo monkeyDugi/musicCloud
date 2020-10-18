@@ -1,0 +1,6 @@
+# 테스트 전용으로 DB연동을 h2 memmory로만 하기 위해서 main과 다르게 모두 없앴다. jpa h2를 사용하면 기본 값이 memmory db 이다
+logging:
+  level:
+    # show_sql과는 다르게 logger를 통해서 로그를 sql 로그를 찍기 때문에 이걸 써야한다.
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
