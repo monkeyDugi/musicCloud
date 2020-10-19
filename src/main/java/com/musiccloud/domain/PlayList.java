@@ -3,7 +3,7 @@ package com.musiccloud.domain;
 import javax.persistence.*;
 
 @Entity
-public class PlayList {
+public class PlayList extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
