@@ -10,9 +10,9 @@ public class Video {
     private Long id;
 
     private String title;
+    private String image;
+    private int playCount;
 
     @Column(name = "video_no")
     private String videoNo;
-    private String image;
-    private int count; // 재생 횟수
 }

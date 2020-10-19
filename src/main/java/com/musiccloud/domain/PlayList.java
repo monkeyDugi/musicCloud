@@ -9,7 +9,7 @@ public class PlayList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int count; // 재생 수
+    private int playCount;
 
     @ManyToOne
     @JoinColumn(name = "member_id")

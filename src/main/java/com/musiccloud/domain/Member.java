@@ -1,8 +1,6 @@
 package com.musiccloud.domain;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Member {
@@ -13,7 +11,4 @@ public class Member {
 
     private String name;
     private String email;
-
-    @OneToMany(mappedBy = "member")
-    private List<PlayList> playList = new ArrayList<>();
 }
