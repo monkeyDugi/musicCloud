@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MonkeyMusic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/dailyChart.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-warning bg-warning fixed-top">
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+        {{>layout/searchEnable}}
+        {{>layout/searchDisable}}
+    </div>
+    {{>layout/myList}}
+    {{>layout/logout}}
+    {{>layout/login}}
+</nav>
+<div class="head-interval"></div>
+{{>layout/iframe}}
+<div class="container">
+    <h2>일간 종합차트</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>순위</th>
+            <th></th>
+            <th>제목</th>
+            <th>가수</th>
+            <th>재생</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        {{>layout/dailyChart/tr}}
+        </tbody>
+    </table>
+</div>
+{{>layout/footer}}
+<script type="text/javascript" src="/js/dailyChart.js"></script>
+</body>
+</html>
