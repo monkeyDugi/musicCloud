@@ -18,4 +18,4 @@ out/
 !**/src/test/**/out/
 
 ### security ###
-application-oauth.yml
+application-oauth.properties
