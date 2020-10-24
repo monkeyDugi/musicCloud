@@ -15,7 +15,6 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 
@@ -25,10 +24,9 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
     private final MemberRepository memberRepository;
     private final HttpSession httpSession;
-    private final EntityManager em;
 
-    @Transactional
     @Override
+    @Transactional
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
         OAuth2UserService delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
@@ -76,7 +74,6 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
             Long id = memberRepository.save(attributes.toEntity());
             return memberRepository.findOne(id);
         }
-        System.out.println("findByEmail = " + em.contains(member));
         member.change(attributes.getName());
         return member;
     }
